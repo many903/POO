@@ -1,3 +1,10 @@
+/**
+ * Autor: Manuel Enrique Garcia Neve 
+ * matricula: 2193077979
+ * Fecha: 15/10/2025
+ * Descripción: Programa combinado con ambos escenarios de decisiones anidadas
+ */
+
 import java.util.Scanner;
 
 public class Ejercicio6 {

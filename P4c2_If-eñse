@@ -1,0 +1,291 @@
+import java.util.Scanner;
+
+/**
+ * Autor: [Tu Nombre]
+ * Fecha: [Fecha Actual]
+ * Descripción: Este programa contiene múltiples ejercicios que utilizan estructuras de control
+ * if-else en Java para resolver diferentes problemas.
+ */
+public class P4c2_If_eñse {
+    
+    public static void main(String[] args) { 
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("=== PROGRAMA DE EJERCICIOS IF-ELSE ===");
+        System.out.println("Autor: [Tu Nombre]");
+        System.out.println("Matrícula: [Tu Matrícula]");
+        System.out.println("\nEste programa contiene 12 ejercicios que demuestran el uso de estructuras de control if-else en Java.");
+        System.out.println("=========================================");
+        
+        int opcion;
+        do {
+            System.out.println("\n=== MENÚ PRINCIPAL ===");
+            System.out.println("1. Determinar si un número es positivo, negativo o cero");
+            System.out.println("2. Comparar dos números");
+            System.out.println("3. Asignar calificación según nota");
+            System.out.println("4. Verificar edad para licencia de conducir");
+            System.out.println("5. Calculadora simple");
+            System.out.println("6. Día de la semana");
+            System.out.println("7. Decidir si salir basado en clima");
+            System.out.println("8. Verificar si puedes comprar un artículo");
+            System.out.println("9. Sugerir medio de transporte");
+            System.out.println("10. Sugerir actividad según temperatura");
+            System.out.println("11. Verificar derecho a descuento");
+            System.out.println("0. Salir");
+            System.out.print("Elige una opción (0-11): ");
+            
+            opcion = scanner.nextInt();
+            
+            switch (opcion) {
+                case 1:
+                    ejercicio1(scanner);
+                    break;
+                case 2:
+                    ejercicio2(scanner);
+                    break;
+                case 3:
+                    ejercicio3(scanner);
+                    break;
+                case 4:
+                    ejercicio4(scanner);
+                    break;
+                case 5:
+                    ejercicio5(scanner);
+                    break;
+                case 6:
+                    ejercicio6(scanner);
+                    break;
+                case 7:
+                    ejercicio7(scanner);
+                    break;
+                case 8:
+                    ejercicio8(scanner);
+                    break;
+                case 9:
+                    ejercicio9(scanner);
+                    break;
+                case 10:
+                    ejercicio10(scanner);
+                    break;
+                case 11:
+                    ejercicio11(scanner);
+                    break;
+                case 0:
+                    System.out.println("Saliendo del programa...");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Intenta de nuevo.");
+            }
+        } while (opcion != 0);
+        
+        System.out.println("\n=== Fin del programa ===");
+        System.out.println("¡Hasta pronto!");
+        scanner.close();
+    }
+    
+    // Ejercicio 1: Determinar si un número es positivo, negativo o cero
+    public static void ejercicio1(Scanner scanner) {
+        System.out.println("\n--- Ejercicio 1: Positivo, Negativo o Cero ---");
+        System.out.print("Ingresa un número: ");
+        
+        if (scanner.hasNextDouble()) {
+            double numero = scanner.nextDouble();
+            
+            if (numero > 0) {
+                System.out.println("El número es positivo.");
+            } else if (numero < 0) {
+                System.out.println("El número es negativo.");
+            } else {
+                System.out.println("El número es cero.");
+            }
+        } else {
+            System.out.println("¡Estas loco!!, eso no es un número!!!");
+            System.out.println("Error del sistema, falla inminente X(");
+            scanner.next(); // Limpiar el buffer
+        }
+    }
+    
+    // Ejercicio 2: Comparar dos números
+    public static void ejercicio2(Scanner scanner) {
+        System.out.println("\n--- Ejercicio 2: Comparar Dos Números ---");
+        System.out.print("Ingresa el primer número: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Ingresa el segundo número: ");
+        double num2 = scanner.nextDouble();
+        
+        if (num1 > num2) {
+            System.out.println("El número " + num1 + " es mayor que " + num2);
+        } else if (num2 > num1) {
+            System.out.println("El número " + num2 + " es mayor que " + num1);
+        } else {
+            System.out.println("Los números son iguales.");
+        }
+    }
+    
+    // Ejercicio 3: Asignar calificación según nota
+    public static void ejercicio3(Scanner scanner) {
+        System.out.println("\n--- Ejercicio 3: Asignar Calificación ---");
+        System.out.print("Ingresa tu nota (0-100): ");
+        int nota = scanner.nextInt();
+        
+        if (nota >= 90) {
+            System.out.println("Calificación: A");
+        } else if (nota >= 80) {
+            System.out.println("Calificación: B");
+        } else if (nota >= 70) {
+            System.out.println("Calificación: C");
+        } else if (nota >= 60) {
+            System.out.println("Calificación: D");
+        } else {
+            System.out.println("Calificación: F");
+        }
+    }
+    
+    // Ejercicio 4: Verificar edad para licencia de conducir
+    public static void ejercicio4(Scanner scanner) {
+        System.out.println("\n--- Ejercicio 4: Licencia de Conducir ---");
+        System.out.print("Ingresa tu edad: ");
+        int edad = scanner.nextInt();
+        
+        if (edad >= 18) {
+            System.out.println("Puedes obtener una licencia de conducir.");
+        } else {
+            System.out.println("No puedes obtener una licencia de conducir.");
+        }
+    }
+    
+    // Ejercicio 5: Calculadora simple
+    public static void ejercicio5(Scanner scanner) {
+        System.out.println("\n--- Ejercicio 5: Calculadora Simple ---");
+        System.out.print("Ingresa el primer número: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Ingresa el segundo número: ");
+        double num2 = scanner.nextDouble();
+        System.out.print("Elige una operación (+, -, *, /): ");
+        char operacion = scanner.next().charAt(0);
+        
+        double resultado = 0;
+        boolean operacionValida = true;
+        
+        if (operacion == '+') {
+            resultado = num1 + num2;
+        } else if (operacion == '-') {
+            resultado = num1 - num2;
+        } else if (operacion == '*') {
+            resultado = num1 * num2;
+        } else if (operacion == '/') {
+            if (num2 != 0) {
+                resultado = num1 / num2;
+            } else {
+                System.out.println("Error: No se puede dividir entre cero.");
+                operacionValida = false;
+            }
+        } else {
+            System.out.println("Error: Operación no válida.");
+            operacionValida = false;
+        }
+        
+        if (operacionValida) {
+            System.out.println("El resultado es: " + resultado);
+        }
+    }
+    
+    // Ejercicio 6: Día de la semana
+    public static void ejercicio6(Scanner scanner) {
+        System.out.println("\n--- Ejercicio 6: Día de la Semana ---");
+        System.out.print("Ingresa un número del 1 al 7: ");
+        int dia = scanner.nextInt();
+        
+        if (dia == 1) {
+            System.out.println("Lunes");
+        } else if (dia == 2) {
+            System.out.println("Martes");
+        } else if (dia == 3) {
+            System.out.println("Miércoles");
+        } else if (dia == 4) {
+            System.out.println("Jueves");
+        } else if (dia == 5) {
+            System.out.println("Viernes");
+            System.out.println("Listo para salir!!");
+        } else if (dia == 6) {
+            System.out.println("Sábado");
+        } else if (dia == 7) {
+            System.out.println("Domingo");
+        } else {
+            System.out.println("Número no válido. Debe ser entre 1 y 7.");
+        }
+    }
+    
+    // Ejercicio 7: Decidir si salir basado en clima
+    public static void ejercicio7(Scanner scanner) {
+        System.out.println("\n--- Ejercicio 7: ¿Puedo Salir? ---");
+        System.out.print("¿Está lloviendo? (sí/no): ");
+        String lluvia = scanner.next().toLowerCase();
+        System.out.print("¿Tienes una sombrilla? (sí/no): ");
+        String sombrilla = scanner.next().toLowerCase();
+        
+        if (lluvia.equals("no") || (lluvia.equals("sí") && sombrilla.equals("sí"))) {
+            System.out.println("Puedes salir.");
+        } else {
+            System.out.println("No debes salir.");
+        }
+    }
+    
+    // Ejercicio 8: Verificar si puedes comprar un artículo
+    public static void ejercicio8(Scanner scanner) {
+        System.out.println("\n--- Ejercicio 8: Presupuesto de Compra ---");
+        System.out.print("Ingresa tu presupuesto: ");
+        double presupuesto = scanner.nextDouble();
+        System.out.print("Ingresa el precio del artículo: ");
+        double precio = scanner.nextDouble();
+        
+        if (precio <= presupuesto) {
+            System.out.println("Puedes comprar el artículo.");
+        } else {
+            System.out.println("No puedes comprar el artículo.");
+        }
+    }
+    
+    // Ejercicio 9: Sugerir medio de transporte
+    public static void ejercicio9(Scanner scanner) {
+        System.out.println("\n--- Ejercicio 9: Medio de Transporte ---");
+        System.out.print("Ingresa la distancia a recorrer (km): ");
+        double distancia = scanner.nextDouble();
+        
+        if (distancia <= 1) {
+            System.out.println("Puedes caminar.");
+        } else if (distancia <= 5) {
+            System.out.println("Puedes ir en bicicleta.");
+        } else {
+            System.out.println("Puedes ir en coche.");
+        }
+    }
+    
+    // Ejercicio 10: Sugerir actividad según temperatura
+    public static void ejercicio10(Scanner scanner) {
+        System.out.println("\n--- Ejercicio 10: Actividad Según Temperatura ---");
+        System.out.print("Ingresa la temperatura (°C): ");
+        double temperatura = scanner.nextDouble();
+        
+        if (temperatura < 10) {
+            System.out.println("Quédate en casa y lee un libro.");
+        } else if (temperatura <= 25) {
+            System.out.println("Da un paseo.");
+        } else {
+            System.out.println("Ve a la playa, te lo mereces!!");
+        }
+    }
+    
+    // Ejercicio 11: Verificar derecho a descuento
+    public static void ejercicio11(Scanner scanner) {
+        System.out.println("\n--- Ejercicio 11: Descuento por Edad ---");
+        System.out.print("Ingresa tu edad: ");
+        int edad = scanner.nextInt();
+        
+        if (edad < 12 || edad > 65) {
+            System.out.println("Tienes derecho a un descuento del 10%.");
+        } else {
+            System.out.println("No tienes derecho a descuento.");
+        }
+    }
+}

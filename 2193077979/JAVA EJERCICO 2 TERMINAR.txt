@@ -1,0 +1,41 @@
+
+    /*
+    Author:Many903
+    POO
+    UAM-L 
+     */
+/*librerias */
+import java.util.Scanner;
+
+    public class EstructurasDeSeleccion {
+    String Nombre;
+    int contracena;
+    int cont_Usuario;
+    String Usuario = "Manuel";
+    contracena =1810;
+    int TP;
+
+    Scanner entradaTeclado = new Scanner ( System.in);
+
+    System.out.println("Hola\n ingresa tu nombre:");
+    Nombre = entradaTeclado.nexLine();
+    System.out.println("\n ingresa tu CLave de Usuario:");
+    cont_Usuario = entradaTeclado.nexLine();
+
+    if (Usuario.equals(Nombre)) {
+        if (contracena == cont_Usuario) {
+            System.out.println("\n ");
+            TP = entradaTeclado.nexLine();
+            if () {
+                
+        }
+        }
+        else {
+            break;
+        };
+    }
+    else {
+         System.out.println("\n Datos equiodos");
+    }
+    }
+

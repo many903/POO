@@ -1,40 +1,48 @@
 package objetos_viernes.persona;
 
+/**
+ * Clase Persona con atributos privados, constructor, getters, setters y toString()
+ */
 public class Persona {
-    //atributos 
-    string Nombre;
-    int Edad;
-    string Genero;
-    
-    //metodo constructor
-    public Persona(srting nombre, int edad, string genero){
-        this.Nombre = nombre;
-        this.Edad = edad;
-        this.Genero = genero;
+    private String nombre;
+    private int edad;
+    private String genero;
+
+    // Constructor
+    public Persona(String nombre, int edad, String genero) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.genero = genero;
     }
-    
-    //metodos
-    public void set edad (){
-        this.Edad = edad 
-    
+
+    // Getters y setters
+    public String getNombre() {
+        return nombre;
     }
-    public void get Edad(){
-        return Edad;
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-    public void set Nombre (){
-        this.Nombre = nombre; 
-    
+
+    public int getEdad() {
+        return edad;
     }
-    public void get Nombre(){
-        return Nombre;
-    } 
-        public void set Genero (){
-        this.Genero = genero;
-    
+
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
-    public void get Genero(){
-        return Edad;
+
+    public String getGenero() {
+        return genero;
     }
-    
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona { nombre='" + nombre + "', edad=" + edad + ", genero='" + genero + "' }";
+    }
 }
 

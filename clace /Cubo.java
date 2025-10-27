@@ -6,37 +6,38 @@ public class Cubo {
     public Cubo() {
     }
 
-     public Cubo( String _tamano) {
-        tamano = _tamano;
+    // Constructor para tamaño
+    public Cubo(double _tamano) {
+        this.tamano = _tamano;
     }
 
-
-    public Cubo( double _peso) {
-        peso = _peso;
+    // Factory para crear un Cubo a partir del peso (evita ambigüedad con otro constructor double)
+    public static Cubo conPeso(double _peso) {
+        Cubo c = new Cubo();
+        c.peso = _peso;
+        return c;
     }
-    
+
     public Cubo(String _color, double _tamano) {
-        color = _color;
-        tamano = _tamano;
+        this.color = _color;
+        this.tamano = _tamano;
     }
 
-    
-    public Cubo( double _tamano, double _peso) {
-        tamano = _tamano;
-        peso = _peso;
-    
+    public Cubo(double _tamano, double _peso) {
+        this.tamano = _tamano;
+        this.peso = _peso;
     }
-    
+
     public Cubo(double _tamano, String _color, double _peso) {
-        tamano = _tamano;
-        color = _color;
-        peso = _peso;
+        this.tamano = _tamano;
+        this.color = _color;
+        this.peso = _peso;
     }
 
     public void mostrar() {
         System.out.println("Tamaño: " + tamano);
         System.out.println("Color: " + color);
-        System.out.println("Peso: " + peso);    
+        System.out.println("Peso: " + peso);
     }
 
     public double getTamano() {
@@ -62,3 +63,4 @@ public class Cubo {
     public void setPeso(double peso) {
         this.peso = peso;
     }
+}

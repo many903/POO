@@ -1,23 +1,44 @@
 public class Cubo {
-    double tamaño;
+    double tamao;
     String color;
     double peso;
 
     public Cubo() {
     }
 
-     public Cubo( String tamaño) {
+     public Cubo( String _tamano) {
+        tamano = _tamano;
+    }
 
+
+    public Cubo(double _peso) {
+        peso = _peso;
+    }
+    
+    public Cubo(String _color, double _tamao) {
+        color = _color;
+        tamano = _tamano;
     }
 
     
-
-    public double getTamaño() {
-        return tamaño;
+    public Cubo( double _tamao, double _peso) {
+        tamano = _tamano;
+        peso = _peso;
+    
+    }
+    
+    public Cubo(double _tamao, String _color, double _peso) {
+        tamano = _tamano;
+        color = _color;
+        peso = _peso;
     }
 
-    public void setTamaño(double tamaño) {
-        this.tamaño = tamaño;
+    public double getTamao() {
+        return tamano;
+    }
+
+    public void setTamao(double tamao) {
+        this.tamano = tamano;
     }
 
     public String getColor() {
@@ -33,11 +54,5 @@ public class Cubo {
     }
 
     public void setPeso(double peso) {
-        this.peso = peso;
-    }
-
-public Cubo(double tamaño, String color, double peso) {
-        this.tamaño = tamaño;
-        this.color = color;
         this.peso = peso;
     }

@@ -7,6 +7,7 @@ public class main {
         System.out.println("--------------------");
         System.out.println("objeto con dos atributos");
         Cubo cubo2 = new Cubo("Grande", "Rojo");
-        cubo2
+        cubo2.mostrar();
+        System.out.println("--------------------");
     }
 }

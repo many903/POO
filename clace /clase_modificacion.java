@@ -33,6 +33,12 @@ public class Cubo {
         peso = _peso;
     }
 
+    public void mostrar() {
+        System.out.println("Tamaño: " + tamao);
+        System.out.println("Color: " + color);
+        System.out.println("Peso: " + peso);    
+    }
+
     public double getTamao() {
         return tamano;
     }

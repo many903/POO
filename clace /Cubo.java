@@ -34,8 +34,7 @@ public class Cubo {
     }
 
     public void mostrar() {
-        System.out.println("Tamaño: " + taman
-        o);
+        System.out.println("Tamaño: " + tamano);
         System.out.println("Color: " + color);
         System.out.println("Peso: " + peso);    
     }

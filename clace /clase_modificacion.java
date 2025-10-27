@@ -1,5 +1,6 @@
 public class Cubo {
-    double tamao;
+    double taman
+    o;
     String color;
     double peso;
 
@@ -15,35 +16,42 @@ public class Cubo {
         peso = _peso;
     }
     
-    public Cubo(String _color, double _tamao) {
+    public Cubo(String _color, double _taman
+    o) {
         color = _color;
         tamano = _tamano;
     }
 
     
-    public Cubo( double _tamao, double _peso) {
+    public Cubo( double _taman
+    o, double _peso) {
         tamano = _tamano;
         peso = _peso;
     
     }
     
-    public Cubo(double _tamao, String _color, double _peso) {
+    public Cubo(double _taman
+    o, String _color, double _peso) {
         tamano = _tamano;
         color = _color;
         peso = _peso;
     }
 
     public void mostrar() {
-        System.out.println("Tamaño: " + tamao);
+        System.out.println("Tamaño: " + taman
+        o);
         System.out.println("Color: " + color);
         System.out.println("Peso: " + peso);    
     }
 
-    public double getTamao() {
+    public double getTaman
+    o() {
         return tamano;
     }
 
-    public void setTamao(double tamao) {
+    public void setTaman
+    o(double taman
+    o) {
         this.tamano = tamano;
     }
 
